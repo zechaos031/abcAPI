@@ -54,7 +54,6 @@ function sendData(send) {
             'Authorization': settings.token
         }
     }).then((res) => {
-        console.log(res)
         if (res.status === 200) {
             return `[Arcane-wrapper] Stats posted ! => https://arcane-botcenter.xyz/api/${settings.id}/stats \n\nGuild: ${send.server_count}\nUsers: ${send.member_count}\nShard: ${send.shard_count}`;
         }else{
